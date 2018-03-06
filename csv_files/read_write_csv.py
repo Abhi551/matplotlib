@@ -78,3 +78,15 @@ with open('new.txt','r',newline="") as fobj:
 	f.close()
 fobj.close()
 
+with  open('dict.csv','w',newline="") as fobj:
+#it is important to give fieldnames while using DictWriter
+	fieldnames=["First_name","last_name"]
+	csv_writer=csv.DictWriter(fobj,delimiter=",",fieldnames=fieldnames)
+	csv_writer.writeheader()
+	csv_writer.writerow({'First_name':"Abhishek","last_name":"Chauhan"})
+	csv_writer.writerow({"First_name":"Xander","last_name":"Groon"})
+	csv_writer.writerows([{"First_name":"Thor","last_name":"Son of odin"},
+						  {"First_name":"Chris","last_name":"Hemmworth"}])
+
+fobj.close()
+
