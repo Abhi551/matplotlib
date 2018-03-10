@@ -40,7 +40,7 @@ fig=plt.figure()
 ## to make unsymmetrical graphs 
 ax1=fig.add_subplot(2,2,1)
 ax2=fig.add_subplot(2,2,2)
-ax3=fig.add_subplot(2,2,4)
+ax3=fig.add_subplot(2,1,1)
 ax1.plot(x,y,'-')
 ax2.scatter(x,y,color='c')
 ax3.bar(x,y,color='r')
